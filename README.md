@@ -16,6 +16,7 @@ bun install --global netlify-cli || npm install netlify-cli -g
 netlify login
 netlify init
 bun run build
+-luego commitear
 
 export default defineConfig({
   integrations: [tailwind()],
