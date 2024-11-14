@@ -8,4 +8,9 @@ npx astro add --list
 npx astro add tailwind
  import tailwind from '@astrojs/tailwind'
 
- npm install @fontsource-variable/onest
+bun install @fontsource-variable/onest
+
+bun install --global netlify-cli || npm install netlify-cli -g
+netlify login
+netlify init
+bun run build
