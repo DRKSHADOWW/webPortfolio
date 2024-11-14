@@ -3,25 +3,48 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro'
 import localImage from '../../public/andrew_david.jpg'
+import LinkedIn from '../components/icons/LinkedIn.astro';
+import SocialPill from '../components/icons/SocialPill.astro';
+import Github from '../components/icons/Github.astro';
+import Email from '../components/icons/Email.astro'
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="portfolio de Andrés - desarrolador y programador web" description='Contratame y haz parte de creaciones increibles e innovadoras'>
 	<main>
 		<section class="w-full lg:w-[740px] mx-auto py-40">
 			<img 
 			class="rounded-full size-12 mb-4"
 			src={localImage.src} alt="andrew photo">
-			<h1 class="text-white text-5xl font-bolf flex justify-center flex-row gap-x-4 pb-10">
-				Hola !, soy Andrés Murillo
+			<h1 class="text-white text-5xl font-bolf flex justify-between flex-row gap-x-4 pb-10">
+			Hola, soy Andrés Murillo
 				<a 
 				href="https://www.linkedin.com/in/andres-david-993b3b338/" 
 				target="_blank"
 				rel="noopener"
-				class="flex justify-center items-center">
+				class="flex justify-center items-center ">
 				<Badge> Disponible para trabajar</Badge>
 				</a>	
 			</h1>
-			<h2 class="text-xl opacity-80">+1 año de epxerencia en desarrollo web, especializado en crear aplicaciones únicas y personalizadas</h2>
+			<h2 class="text-xl opacity-80 text-wrap">  Soy un apasionado <span class="text-yellow-200 opacity-80"> Desarrollador web,</span><span class="text-red-300/90"> de Medellín, colombia</span> con<span class="text-white-700">  +2 año de experiencia.  mi objetivo es crear soluciones creativas, </span>experiencias únicas y proyectos innovadores, que no solo cumplan con las expectativas, sino que las superen.</h2>
+
+			
+				<nav class="flex gap-x-2 mt-4">
+					<SocialPill href="https://www.linkedin.com/in/andres-david-993b3b338/">
+					<LinkedIn class='size-6'/>
+					LinkedIn
+					</SocialPill>
+
+					<SocialPill href="https://github.com/DRKSHADOWW">
+					<Github class="size-6"/>
+					Github
+					</SocialPill>
+
+					<SocialPill href="mailto:andresdavid.dev.1405@gmail.com">
+					<Email class="size-6"/>
+					Gmail
+					</SocialPill>
+				</nav>
+			
 		</section>
 	
 	</main>
