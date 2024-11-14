@@ -10,7 +10,18 @@ npx astro add tailwind
 
 bun install @fontsource-variable/onest
 
+
+### desplegar a netlify
 bun install --global netlify-cli || npm install netlify-cli -g
 netlify login
 netlify init
 bun run build
+
+export default defineConfig({
+  integrations: [tailwind()],
+  output: 'server',
+  adapter: netlify({
+    edgeMiddleware: true
+  })
+  
+});
