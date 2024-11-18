@@ -1,0 +1,61 @@
+---
+import ExperienceItem from "../ExperienceItem.astro"
+const EXPERIENCE = [
+
+{
+    date: "Febraury 2022",
+    title: "Application IU code in tailwind CSS",
+    description:
+        "Get access to over 20+ pages including a dashboard Layout, charts, kanban board, calendar, and pre-order E-commerce & Marketing pages",
+        link: "#",
+},
+{
+    date: "March 2022",
+    title: "Marketing IU design in Figma",
+    description:
+    "All of the pages and components are first designed en Fogma and we keep a parity between the two versions even as we apdate the project.",
+},
+{
+    date: "Apil 2022",
+    title: "E-commerce UI code in tailwind CSS",
+    description:
+    "Get started with dozens of web componentst as interactive elements built on top of Tailwind CSS.",
+}
+]
+---
+<ol class="relative border-s border-gray-200 dark:border-gray-700">    
+    {
+        EXPERIENCE.map(experience =>(
+        <li class="mb-10 ms-4">
+            <ExperienceItem {...experience} />
+        </li>
+        ))
+        }               
+   
+</ol>
+
+
+
+
+
+
+<!-- <svg  
+xmlns="http://www.w3.org/2000/svg"  
+width="24"  
+height="24"  
+viewBox="0 0 24 24"  
+fill="none"  
+stroke="currentColor"  
+stroke-width="2" 
+stroke-linecap="round" 
+stroke-linejoin="round">
+
+  <path 
+  stroke="none" 
+  d="M0 0h24v24H0z" 
+  fill="none"/><path 
+  d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" />
+  <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+  <path d="M12 12l0 .01" />
+  <path d="M3 13a20 20 0 0 0 18 0" />
+</svg> -->

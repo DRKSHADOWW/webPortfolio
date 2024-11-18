@@ -2,6 +2,7 @@ powershell -c "irm bun.sh/install.ps1 | iex"
 bun -v
 bun create astro@latest
 cd web-portfolio
+abrir en la terminal command propmt
 bun run dev
 
 npx astro add --list

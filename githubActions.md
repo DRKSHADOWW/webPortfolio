@@ -5,7 +5,7 @@
     name: hola-mundo
     on: [push]
     jobs:
-      hola-mundo
+      hola-mundo  
         runs-on: ubuntu-latest
         steps:
           - name: Public IP
