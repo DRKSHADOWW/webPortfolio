@@ -9,11 +9,13 @@ import Email from '../components/icons/Email.astro'
 import Experience from '../components/icons/Experience.astro'
 import SectionContainer from  '../components/SectionContainer.astro'
 import BriefCase from '../components/icons/BriefCase.astro'
+import Code from '../components/icons/Code.astro'
+import Projects from '../components/Projects.astro'
 
 ---
 
 <Layout title="portfolio de Andrés - desarrolador y programador web" description='Contratame y haz parte de creaciones increibles e innovadoras'>
-	<main>
+	<main class="text-white-500">
 		<SectionContainer class="py-40 pb-20">
 			<img 
 			class="rounded-full size-12 mb-4"
@@ -29,7 +31,7 @@ import BriefCase from '../components/icons/BriefCase.astro'
 				</a>	
 			</h1>
 			<h2 
-			class="text-xl opacity-80 text-wrap tex-white-500">
+			class="text-xl opacity-80 text-wrap text-white-500">
 			Soy un apasionado
 			<span class="text-yellow-200 opacity-80">
 				Desarrollador web,
@@ -38,10 +40,11 @@ import BriefCase from '../components/icons/BriefCase.astro'
 			class="text-red-300/90">
 			 de Medellín, colombia
 			</span> 
-			con<span class="text-white-700">
-				  +2 año de experiencia.  mi objetivo es crear soluciones creativas, 
+			con
+			<span class="text-white-700">
+				  +2 año de experiencia.  mi objetivo es crear soluciones creativas, experiencias únicas y proyectos innovadores, que no solo cumplan con las expectativas, sino que las superen.
 				</span>
-				experiencias únicas yyg proyectos innovadores, que no solo cumplan con las expectativas, sino que las superen.
+				
 			</h2>
 
 			
@@ -63,10 +66,21 @@ import BriefCase from '../components/icons/BriefCase.astro'
 				</nav>
 			
 		</SectionContainer>
-		<SectionContainer >
-			<h2 class="text-2xl font-semi-bold mb-6">Experiencia laboral</h2>
-			<BriefCase />
+		<SectionContainer id='experience'>
+			<h2 class="text-2xl font-semi-bold mb-6 flex gap-x-3 items-center ">
+				<BriefCase class="size-7"/>
+				Experiencia laboral
+			</h2>
+			
 			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="projects">
+			<h2 class="text-2xl font-semi-bold mb-6 flex gap-x-3 items-center ">
+				<Code class="size-8"/>
+				Proyectos
+			</h2>
+			<Projects />
 		</SectionContainer>
 	
 	</main>

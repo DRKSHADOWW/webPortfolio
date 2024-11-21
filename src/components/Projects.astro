@@ -1,0 +1,40 @@
+---
+import PHP from './icons/PHP.astro'
+const TAGS ={
+    PHP:{
+        name: "PHP",
+        class: "bg-white/10 text-white",
+        icon: PHP
+    }
+}
+const PROJECTS = [
+    {
+        title: 'App Salón',
+        description: 'creacion de página de web para una barbería con las tecnologías de javascripts, scss, html, y php',
+        link: 'https://concierto1234.netlify.app/',
+        github: 'https://github.com/DRKSHADOWW/appsalon_php',
+        image: '../../public/project1.jpg',
+        tags: [TAGS.PHP]
+    }
+]
+---
+
+{
+    PROJECTS.map(({title, description, tags, image}) =>(
+        <article>
+            <h3 class="text-2xl font-semibold text-yellow-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="mb-3 flex gap-x-4 flex-row">
+                {tags.map(tag =>(
+                    <li>
+                        <span class={` flex gap-x-2 rounded-full text-xs bg-gray ${tag.class} py-1 px-2`} >
+                        <tag.icon class="size-10"/>
+                         <p class="flex -1 text-sm items-center">{tag.name}</p>
+                        </span>
+                    </li>
+                ))}
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10"src={image} alt="imagen del proyecto">
+        </article>
+    ))
+}
