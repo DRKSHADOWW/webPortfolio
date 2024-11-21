@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
 import Badge from '../components/Badge.astro'
 import localImage from '../../public/andrew_david.jpg'
 import LinkedIn from '../components/icons/LinkedIn.astro';
@@ -14,12 +13,13 @@ import BriefCase from '../components/icons/BriefCase.astro'
 ---
 
 <Layout title="portfolio de Andrés - desarrolador y programador web" description='Contratame y haz parte de creaciones increibles e innovadoras'>
-	<main>
-		<SectionContainer class="py-40 pb-20">
+	<main class="">
+		<SectionContainer  class="py-40 pb-20">
 			<img 
 			class="rounded-full size-12 mb-4"
 			src={localImage.src} alt="andrew photo">
-			<h1 class="text-white text-5xl font-bolf flex justify-between flex-row gap-x-4 pb-10" >
+			<h1 
+			class="text-white text-2xl md:text-4xl lg:text-5xl font-bolf flex justify-between flex-row gap-x-4 lg:pb-10 pb-6" >
 			Hola, soy Andrés Murillo
 				<a 
 				href="https://www.linkedin.com/in/andres-david-993b3b338/" 
@@ -29,30 +29,31 @@ import BriefCase from '../components/icons/BriefCase.astro'
 				<Badge> Disponible para trabajar</Badge>
 				</a>	
 			</h1>
-			<h2 class="text-xl opacity-80 text-wrap">  Soy un apasionado <span class="text-yellow-200 opacity-80"> Desarrollador web,</span><span class="text-red-300/90"> de Medellín, colombia</span> con<span class="text-white-700">  +2 año de experiencia.  mi objetivo es crear soluciones creativas, </span>experiencias únicas yyg proyectos innovadores, que no solo cumplan con las expectativas, sino que las superen.</h2>
+			<h2 class="text-xl lg:text-2xl opacity-80 text-wrap max-w-[700px]">  Soy un apasionado <span class="text-yellow-200 opacity-80"> Desarrollador web,</span><span class="text-red-300/90"> de Medellín, colombia</span> con<span class="text-white-700">  +2 año de experiencia.  mi objetivo es crear soluciones creativas, </span>experiencias únicas yyg proyectos innovadores, que no solo cumplan con las expectativas, sino que las superen.</h2>
 
 			
-				<nav class="flex gap-x-2 mt-4">
+				<nav class="flex gap-2 mt-4 flex-wrap">
 					<SocialPill href="https://www.linkedin.com/in/andres-david-993b3b338/">
-					<LinkedIn class='size-6'/>
+					<LinkedIn class='size-4 md:size-6'/>
 					LinkedIn
 					</SocialPill>
 
 					<SocialPill href="https://github.com/DRKSHADOWW">
-					<Github class="size-6"/>
+					<Github class="size-4 md:size-6"/>
 					Github
 					</SocialPill>
 
 					<SocialPill href="mailto:andresdavid.dev.1405@gmail.com">
-					<Email class="size-6"/>
+					<Email class="size-4 md:size-6"/>
 					Gmail
 					</SocialPill>
 				</nav>
 			
 		</SectionContainer>
-		<SectionContainer >
-			<h2 class="text-2xl font-semi-bold mb-6">Experiencia laboral</h2>
-			<BriefCase />
+		<SectionContainer id="experience" class="">
+			<h2 class="text-2xl font-semi-bold mb-6 flex gap-x-3 items-center">
+				<BriefCase class="size=8"/>
+				Experiencia laboral</h2>
 			<Experience />
 		</SectionContainer>
 	

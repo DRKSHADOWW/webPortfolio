@@ -1,13 +1,14 @@
 ---
 import Header from '../components/Header.astro'
 import '@fontsource-variable/onest'
+import Footer from '../components/Footer.astro'
 interface Props {
 	title: string;
 	description: string;
 }
 
 const { title, description } = Astro.props;
-const styleBody = "absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
+const styleBody = "absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 px-4 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"
 
 ---
 
@@ -26,6 +27,7 @@ const styleBody = "absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[ra
 		
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html>
 <style is:global>
@@ -35,6 +37,7 @@ const styleBody = "absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[ra
 	html {
 		background: #000;
 		font-family: 'Onest Variable', sans-serif;
+		scroll-behavior: smooth;
 		
 	}
 	body{
@@ -44,5 +47,11 @@ const styleBody = "absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[ra
 		height:100vh;
 		
 	}
+
+	@media (prefers-reduced-motion: reduce){
+			html {
+				scroll-behavior: auto;
+			}
+		}
 
 </style>
